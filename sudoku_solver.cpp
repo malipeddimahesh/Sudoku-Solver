@@ -108,7 +108,11 @@ int main()
     {
         for(col=0;col<9;col++)
         {
-            cin>>board[row][col];
+            if(!(cin>>board[row][col])) 
+            {
+                cout << "Invalid input: expected 81 integers.\n";
+                return 0;
+            }
         }
     }
     cout << "Initial Sudoku\n";
